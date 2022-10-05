@@ -10,23 +10,24 @@ const questionCardDisplay = document.querySelector(".question-card");
 
 // ask question function // can set some of these variable to the global object
 const questionAsker = () => {
-const questionChooser = Math.floor(Math.random() * 5);
-const liveQuestionArry = (questionArry[questionChooser]);
-const thisQuestion = liveQuestionArry.question;
-const questionChoice1 = liveQuestionArry.options[0];
-const questionChoice2 = liveQuestionArry.options[1];
-const questionChoice3 = liveQuestionArry.options[2];
-questionCardDisplay.innerHTML = `
-<div>
-  <h1>Your question is;</h1>
-  <h2>${thisQuestion}</h2>
-  <h3>Is it;
-  <button class="qChoiceA">A) ${questionChoice1}</button>
-  <button class="qChoiceB">B) ${questionChoice2}</button>
-  <button class="qChoiceC">C) ${questionChoice3}</button>
-</div>
-`
-}
+  const questionChooser = Math.floor(Math.random() * 5);
+  const liveQuestionArry = (questionArry[questionChooser]);
+  const thisQuestion = liveQuestionArry.question;
+  const questionChoice1 = liveQuestionArry.options[0];
+  const questionChoice2 = liveQuestionArry.options[1];
+  const questionChoice3 = liveQuestionArry.options[2];
+  questionCardDisplay.innerHTML = `
+  <div>
+    <h1>Your question is;</h1>
+    <h2>${thisQuestion}</h2>
+    <h3>Is it;
+    <button class="qChoiceA">A) ${questionChoice1}</button>
+    <button class="qChoiceB">B) ${questionChoice2}</button>
+    <button class="qChoiceC">C) ${questionChoice3}</button>
+  </div>
+  `
+  }
+
 // console.log(`Your question is;
 // ${thisQuestion}
 // Is it;
