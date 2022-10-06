@@ -24,7 +24,6 @@ const gameBegins = () => {
   <h1>HERES THE RULES</h1>
   <h2>Answer Right</h2>
   <h3>Win Prizes</h3>
-  <h3>Pick a category to start!</h3>
   `
   document.getElementById("startButton_show").className = "startButton_hide";
   audioCrowdCheer.play();

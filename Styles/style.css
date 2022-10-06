@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../Resources/phonebox-mobilesize.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.scoreboard {
+  border: 2px solid purple;
+  height: 175px;
+  width: 345px;
+  text-align: center;
+  background-color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.display {
+  border: 2px solid black;
+  height: 200px;
+  width: 345px;
+  text-align: center;
+  background-color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.category-choice {
+  border: 2px solid green;
+  height: 175px;
+  width: 345px;
+  text-align: center;
+  background-color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#startButton_show {
+  text-align: center;
+}
+
+.startButton_hide {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

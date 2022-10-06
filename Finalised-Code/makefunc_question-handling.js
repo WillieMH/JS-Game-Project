@@ -59,6 +59,7 @@ const questionHandler = {
 // *** CODE BELOW IS FOR LOADING QUESTIONS TO QUESTIONHANDLER OBJECT
 // *** @ 1506 06.10.2022 IT IS COMPLETED, WORKS AND JUST NEEDS PUTTING INTO FUNCTIONS.
 
+const setEasyQuestions = () => {
 const randomQuestionChooser = Math.floor(Math.random() *10);
 const questionEasy = (sportsEasyArry[randomQuestionChooser]);
 questionHandler.easyQuestion = questionEasy.question;
@@ -66,24 +67,35 @@ questionHandler.easyQAnswer = questionEasy.answer;
 questionHandler.easyQOption1 = questionEasy.options[0];
 questionHandler.easyQOption2 = questionEasy.options[1];
 questionHandler.easyQOption3 = questionEasy.options[2];
+};
 
 
+const setMediumQuestions = () => {
 const randomQuestionChooserMed = Math.floor(Math.random() *10);
-const questionMed = (sportsMediumArry[randomQuestionChooser]);
+const questionMed = (sportsMediumArry[randomQuestionChooserMed]);
 questionHandler.medQuestion = questionMed.question;
 questionHandler.medQAnswer = questionMed.answer;
 questionHandler.medQOption1 = questionMed.options[0];
 questionHandler.medQOption2 = questionMed.options[1];
 questionHandler.medQOption3 = questionMed.options[2];
+};
 
+const setDifficultQuestions = () => {
 const randomQuestionChooserDif = Math.floor(Math.random() *10); //this bit works
-const questionHard = (sportsHardArry[randomQuestionChooser]); //this bit works
+const questionHard = (sportsHardArry[randomQuestionChooserDif]); //this bit works
 questionHandler.hardQuestion = questionHard.question; //this bit works
 questionHandler.hardQAnswer = questionHard.answer;
 questionHandler.hardQOption1 = questionHard.options[0];
 questionHandler.hardQOption2 = questionHard.options[1];
 questionHandler.hardQOption3 = questionHard.options[2];
+}
 
+const loadQuestions = () => {
+  setEasyQuestions();
+  setMediumQuestions();
+  setDifficultQuestions();
+}
 
+loadQuestions();
 console.log(questionHandler);
 
