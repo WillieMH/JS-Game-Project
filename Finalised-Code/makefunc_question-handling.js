@@ -56,19 +56,21 @@ const questionHandler = {
   hardQOption3: null,
 };
 
-const randomQuestionChooser = Math.floor(Math.random() *10); //this bit works
-const questionEasy = (sportsEasyArry[randomQuestionChooser]); //this bit works
-questionHandler.easyQuestion = questionEasy.question; //this bit works
+// *** CODE BELOW IS FOR LOADING QUESTIONS TO QUESTIONHANDLER OBJECT
+// *** @ 1506 06.10.2022 IT IS COMPLETED, WORKS AND JUST NEEDS PUTTING INTO FUNCTIONS.
+
+const randomQuestionChooser = Math.floor(Math.random() *10);
+const questionEasy = (sportsEasyArry[randomQuestionChooser]);
+questionHandler.easyQuestion = questionEasy.question;
 questionHandler.easyQAnswer = questionEasy.answer;
 questionHandler.easyQOption1 = questionEasy.options[0];
 questionHandler.easyQOption2 = questionEasy.options[1];
 questionHandler.easyQOption3 = questionEasy.options[2];
 
-// **** WORK LATEST AT THIS POINT, ALTER TO QUESTION DIFFICULTIES.
-// repeat for med & dif levels
-const randomQuestionChooserMed = Math.floor(Math.random() *10); //this bit works
-const questionMed = (sportsMediumArry[randomQuestionChooser]); //this bit works
-questionHandler.medQuestion = questionMed.question; //this bit works
+
+const randomQuestionChooserMed = Math.floor(Math.random() *10);
+const questionMed = (sportsMediumArry[randomQuestionChooser]);
+questionHandler.medQuestion = questionMed.question;
 questionHandler.medQAnswer = questionMed.answer;
 questionHandler.medQOption1 = questionMed.options[0];
 questionHandler.medQOption2 = questionMed.options[1];
