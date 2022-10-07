@@ -1,40 +1,95 @@
-//question packs (look to import from external sheet)
 const sportsEasyArry = [
   {question: "What sport is described as “the beautiful game”?", answer: "A", options: ["Football", "Golf", "Fishing"]},
-  {question: "How long is the total distance of a marathon?", answer: "C", options: ["40.2miles", "25.5miles", "26.2miles"]},
-  {question: "What was Mohammed Ali's original name?", answer: "B", options: ["Mohammed Clay", "Cassius Clay", "Cassius Ali"]},
   {question: "What is the maximum break you can score in snooker?", answer: "B", options: ["145", "147", "150"]},
   {question: "In football, which team has won the Champions League (formerly the European Cup) the most?", answer: "B", options: ["Barcelona", "Real Madrid", "Liverpool"]},
-  {question: "Which Formula 1 driver has won the most races in the history of the sport?", answer: "B", options: ["Michael Schumacer", "Lewis Hamilton", "Ayrton Senna"]},
-  {question: "Which sport uses a net, a racket, and a shuttlecock?", answer: "C", options: ["Tennis", "Squash", "Badminton"]},
   {question: "What two teams play in “El Clasico”?", answer: "C", options: ["Ath. Madrid & Real Madrid", "AC Milan & Inter Milan", "Barcelona & Real Madrid"]},
-  {question: "What is the name Tyson Fury calls himself?", answer: "C", options: ["The Whirlwind", "The Tornado", "Gypsy King"]},
   {question: "Which country did F1 legend Ayrton Senna come from?", answer: "C", options: ["Spain", "Italy", "Brazil"]},
   ];
   const sportsMediumArry =[
     {question: "Which country won the first ever football world cup?", answer: "B", options: ["Brazil", "Uruguay", "France"]},
     {question: "How many gold medals has Usain Bolt won?", answer: "A", options: ["8", "7", "6"]},
     {question: "What five colours make up the Olympic rings?", answer: "C", options: ["Red, yellow, green, white & blue", "Blue, red, green, yellow & purple", "Blue, black, green, red & yellow"]},
-    {question: "Who has won more tennis grand slam titles, Venus Williams or Serena Williams?", answer: "B", options: ["Venus", "Serena", "Tied"]},
-    {question: "Which country won the first ever rugby world cup?", answer: "A", options: ["New Zealand", "Australia", "South Africa"]},
     {question: "In which sport would competitors use a piece of equipment known as a foil?", answer: "B", options: ["Triathalon", "Fencing", "Fishing"]},
-    {question: "In which sport do teams compete to win the Stanley Cup?", answer: "C", options: ["American Football", "Basketball", "Ice Hockey"]},
     {question: "What international rugby team are known as the Pumas?", answer: "B", options: ["Uruguay", "Argentina", "Paraguay"]},
-    {question: "At which Olympics did Kelly Holmes win two gold medals?", answer: "A", options: ["Athens 2004", "Sydney 2000", "Beijing 2008"]},
-    {question: "Won who the last cricket world cup?", answer: "England", options: ["India", "West Indies", "England"]}
-  ]
+  ];
   const sportsHardArry = [
     {question: "How many regulation strokes are there in swimming?", answer: "A", options: ["Four", "Two", "Six"]},
-    {question: "What is his world record time for the 100 metres?", answer: "A", options: ["9.58secs", "9.48secs", "9.53sec"]},
-    {question: "What is the only sport to be played on the moon?", answer: "A", options: ["Golf", "American Football", "Tennis"]},
-    {question: "How many NBA championships did Michael Jordan win with the Chicago Bulls?", answer: "C", options: ["4", "5", "6"]},
-    {question: "The Chicago Cubs and Boston Red Sox play which sport?", answer: "A", options: ["Baseball", "Basketball", "American Football"]},
     {question: "Who is the Premier League's all-time top scorer?", answer: "A", options: ["Alan Shearer", "Michael Owen", "Iain Wright"]},
     {question: "Which course is The Masters golf tournament held?", answer: "A", options: ["Augusta National Golf Club", "Pine Valley", "Pebble Beach"]},
     {question: "Which sport involves tucks and pikes?", answer: "B", options: ["Fishing", "Diving", "Horse Dresage"]},
     {question: "What is Canada's national sport?", answer: "B", options: ["Ice Hockey", "Lacrosse", "Baseball"]},
-    {question: "How many players are there in a rugby league team?", answer: "C", options: ["15", "14", "13"]}
-  ]
+  ];
+const TVAndFilmEasyArry = [
+  {question: "In which English seaside town was 'Fawlty Towers' set?", answer: "A", options: ["Torquay", "Newquay", "Torbay"]},
+  {question: "How many contestants are on each team in 'University Challenge'?", answer: "A", options: ["Four", "wrong answer1", "wrong answer2"]},
+  {question: "Who played Leonard Hofstadter in 'The Big Bang Theory'?", answer: "B", options: ["wrong answer1", "Johnny Galecki", "wrong answer2"]},
+  {question: "Who is the alter ego of Scott Lang, as featured in the 2015 and 2018 Marvel films?", answer: "B", options: ["Spider Man", "Ant-Man", "wrong answer2"]},
+  {question: "Who played Phoebe Buffay in 'Friends'?", answer: "B", options: ["wrong answer1", "Lisa Kudrow", "wrong answer2"]},
+]
+
+const TVAndFilmMediumArry = [
+  {question: "The 1986 novel 'It' by Stephen King was turned into a film in 2017. What is the name of the clown?", answer: "C", options: ["wrong answer1", "wrong answer2", "Pennywise"]},
+  {question: "Who directed the film Jaws (1975)?", answer: "A", options: ["wrong answer1", "Steven Spielberg", "wrong answer2"]},
+  {question: "Who played Katniss Everdeen in 'The Hunger Games' series?", answer: "A", options: ["Jennifer Lawrence", "wrong answer1", "wrong answer2"]},
+  {question: "Who played  Rick Blaine in 'Casablanca' (1942)?", answer: "A", options: ["Humphrey Bogart", "wrong answer1", "wrong answer2"]},
+  {question: "Who won 'Britain's Got Talent in June 2018?", answer: "C", options: ["wrong answer1", "wrong answer2", "Lost Voice Guy"]},
+];
+
+const TVAndFilmHardArry = [
+  {question: "Who were the four main characters in The Young Ones?", answer: "C", options: ["wrong answer1", "wrong answer2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "From which show does the theme song start “Now this is a story all about how my life got flipped, turned upside down.”?", answer: "C", options: ["wrong answer1", "wrong answer2", "The Fresh Prince of Bel Air"]},
+  {question: "Who got pushed into the Thames and disappeared, presumed dead, in 'Absolutely Fabulous: The Movie' (2014)?", answer: "C", options: ["wrong answer1", "wrong answer2", "Kate Moss"]},
+  {question: "Who directed the film A Clockwork Orange (1971)?", answer: "A", options: ["Stanley Kubrick", "wrong answer1", "wrong answer2"]},
+  {question: "Which film won the 'Best Picture' Oscar in the 90th Academy Awards in 2018?", answer: "A", options: ["The Shape of Water", "wrong answer1", "wrong answer2"]},
+];
+
+const musicEasyArry = [
+  {question: "Music Easy Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Easy Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Easy Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Easy Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Easy Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+];
+
+const musicMediumArry = [
+  {question: "Music Med Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Med Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Med Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Med Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Med Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+];
+
+const musicHardArry = [
+  {question: "Music Hard Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Hard Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Hard Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Hard Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Music Hard Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+];
+
+const javaEasyArry = [
+  {question: "Java Easy Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Easy Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Easy Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Easy Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Easy Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+];
+
+const javaMediumArry = [
+  {question: "Java Med Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Med Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Med Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Med Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Med Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+];
+
+const javaHardArry = [
+  {question: "Java Hard Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Hard Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Hard Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Hard Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Java Hard Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+];
 
 // global variables
     // Object for handling questions
@@ -47,18 +102,22 @@ const questionHandler = {
 };
 
     // Object for handling scores
-    const quizGameScores = {
+const quizGameScores = {
       roundScore: 0,
       overallGameScore: 0,
       thisQuestionPoints: 5,
-    }
+};
 
     // Object for handling quiz information
-    const quizInfoHandler = {
+const quizInfoHandler = {
       currentQuestionNumber: 1,
       currentRound: 1,
 
-    }
+};
+
+let currentEasyQuestionPack = null;
+let currentMedQuestionPack = null;
+let currentHardQuestionPack = null;
 
 // Audio resources
 const audioCrowdCheer = new Audio("./resources/mixkit-cartoon-monkey-applause-103.wav");
@@ -106,52 +165,74 @@ const gameBegins = () => {
 
     //Category Selected
 const catPlaySportsQ1 =() => {
+  currentEasyQuestionPack = null;
+  currentEasyQuestionPack = sportsEasyArry;
+  currentMedQuestionPack = sportsMediumArry;
+  currentHardQuestionPack = sportsHardArry;
+  setEasyQuestions();
+
   questionCardDisplay.innerHTML = `
   <h1>YOU'VE CHOOSEN SPORTS</h1>
   <h2>Here is your first question for 5pts</h2>
   `
   document.getElementById("catBut1").className = "category-choice__one--unlit";
   document.getElementById("catBoard").className = "category-choice-hidden";
-  setEasyQuestions(); //loadQuestions = this is sports q only, need to rename to cat.
   audiodrumRoll.play();
   setTimeout(playQuestionOne, 2500);
-
 }
 
 const catPlayFilm =() => {
+  currentEasyQuestionPack = null;
+  currentEasyQuestionPack = TVAndFilmEasyArry;
+  currentMedQuestionPack = TVAndFilmMediumArry;
+  currentHardQuestionPack = TVAndFilmHardArry;
+  setEasyQuestions();
   questionCardDisplay.innerHTML = `
   <h1>YOU'VE CHOOSEN TV & FILM</h1>
   <h2>Here is your first question for 5pts</h2>
   `
   document.getElementById("catBut2").className = "category-choice__two--unlit";
   document.getElementById("catBoard").className = "category-choice-hidden";
-  setEasyQuestions();
+  audiodrumRoll.play();
+  setTimeout(playQuestionOne, 2500);
 }
 
 const catPlayScience =() => {
+  currentEasyQuestionPack = null;
+  currentEasyQuestionPack = musicEasyArry;
+  currentMedQuestionPack = musicMediumArry;
+  currentHardQuestionPack = musicHardArry;
+  setEasyQuestions();
   questionCardDisplay.innerHTML = `
   <h1>YOU'VE CHOOSEN SCIENCE & NATURE</h1>
   <h2>Here is your first question for 5pts</h2>
   `
   document.getElementById("catBut3").className = "category-choice__three--unlit";
   document.getElementById("catBoard").className = "category-choice-hidden";
-  loadQuestions();
+  audiodrumRoll.play();
+  setTimeout(playQuestionOne, 2500);
 }
 
 const catPlayJava =() => {
+  currentEasyQuestionPack = null;
+  currentEasyQuestionPack = javaEasyArry;
+  currentMedQuestionPack = javaMediumArry;
+  currentHardQuestionPack = javaHardArry;
+  setEasyQuestions();
   questionCardDisplay.innerHTML = `
   <h1>YOU'VE CHOOSEN JAVASCRIPT</h1>
   <h2>Here is your first question for 5pts</h2>
   `
   document.getElementById("catBut4").className = "category-choice__four--unlit";
   document.getElementById("catBoard").className = "category-choice-hidden";
-  loadQuestions();
+  audiodrumRoll.play();
+  setTimeout(playQuestionOne, 2500);
 }
 
     //Load questions
 const setEasyQuestions = () => {
-      const randomQuestionChooser = Math.floor(Math.random() *10);
-      const questionEasy = (sportsEasyArry[randomQuestionChooser]);
+      const randomQuestionChooser = Math.floor(Math.random() *5);
+      const questionEasy = (currentEasyQuestionPack[randomQuestionChooser]);
       questionHandler.theQuestion = questionEasy.question;
       questionHandler.theAnswer = questionEasy.answer;
       questionHandler.option1 = questionEasy.options[0];
@@ -160,8 +241,8 @@ const setEasyQuestions = () => {
 };
       
 const setMediumQuestions = () => {
-      const randomQuestionChooserMed = Math.floor(Math.random() *10);
-      const questionMed = (sportsMediumArry[randomQuestionChooserMed]);
+      const randomQuestionChooserMed = Math.floor(Math.random() *5);
+      const questionMed = (currentMedQuestionPack[randomQuestionChooserMed]);
       questionHandler.theQuestion = questionMed.question;
       questionHandler.theAnswer = questionMed.answer;
       questionHandler.option1 = questionMed.options[0];
@@ -170,9 +251,9 @@ const setMediumQuestions = () => {
 };
       
 const setDifficultQuestions = () => {
-      const randomQuestionChooserDif = Math.floor(Math.random() *10); //this bit works
-      const questionHard = (sportsHardArry[randomQuestionChooserDif]); //this bit works
-      questionHandler.theQuestion = questionHard.question; //this bit works
+      const randomQuestionChooserDif = Math.floor(Math.random() *5); 
+      const questionHard = (currentHardQuestionPack[randomQuestionChooserDif]); 
+      questionHandler.theQuestion = questionHard.question;
       questionHandler.theAnswer = questionHard.answer;
       questionHandler.option1 = questionHard.options[0];
       questionHandler.option2 = questionHard.options[1];
@@ -289,7 +370,10 @@ const endOfTheRound = () => {
   <h3>Giving you an overall score of ${quizGameScores.overallGameScore}pts</h3>
   `
   document.getElementById("questions").className = "questionDisplay-hidden";
-
+  setTimeout(gameBegins, 2500);
+  quizInfoHandler.currentQuestionNumber = 1;
+  quizGameScores.roundScore = 0;
+  quizGameScores.thisQuestionPoints = 5;
   // reset questions, scoring, update overall score, need rounds played indicator
 }
 
