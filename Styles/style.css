@@ -40,6 +40,38 @@ body {
   margin-right: auto;
   margin-bottom: 20px;
 }
+.category-choice .category-choice__one {
+  border: 1px solid black;
+  background-color: yellow;
+}
+.category-choice .category-choice__one--unlit {
+  border: 1px solid red;
+  background-color: grey;
+}
+.category-choice .category-choice__two {
+  border: 1px solid black;
+  background-color: yellow;
+}
+.category-choice .category-choice__two--unlit {
+  border: 1px solid red;
+  background-color: grey;
+}
+.category-choice .category-choice__three {
+  border: 1px solid black;
+  background-color: yellow;
+}
+.category-choice .category-choice__three--unlit {
+  border: 1px solid red;
+  background-color: grey;
+}
+.category-choice .category-choice__four {
+  border: 1px solid black;
+  background-color: yellow;
+}
+.category-choice .category-choice__four--unlit {
+  border: 1px solid red;
+  background-color: grey;
+}
 
 #startButton_show {
   text-align: center;
