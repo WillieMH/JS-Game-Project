@@ -4,13 +4,13 @@
 
 body {
   background-image: url("../Resources/phonebox-mobilesize.png");
-  background-position: center;
+
   background-repeat: no-repeat;
 }
 
 .scoreboard {
   border: 2px solid purple;
-  height: 175px;
+  height: 50px;
   width: 345px;
   text-align: center;
   background-color: aliceblue;
@@ -30,7 +30,17 @@ body {
 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
+}
+
+.questionDisplay{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.questionDisplay-hidden {
+  display: none;
 }
 
 .category-choice {
@@ -42,7 +52,7 @@ body {
 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-top: 15px;
 
   .category-choice__one{
     border: 1px solid black;
@@ -83,6 +93,10 @@ body {
     border: 1px solid red;
     background-color: grey;
   }
+}
+
+.category-choice-hidden {
+  display: none;
 }
 
 #startButton_show {

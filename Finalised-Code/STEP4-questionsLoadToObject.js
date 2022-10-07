@@ -57,7 +57,6 @@ const questionHandler = {
 };
 
 const audioCrowdCheer = new Audio("./resources/mixkit-cartoon-monkey-applause-103.wav");
-const audiodrumRoll = new Audio("./resources/drum-roll-105602.mp3");
 
 
 //queries
@@ -67,9 +66,6 @@ const catChoiceSports = document.querySelector(".category-choice__one");
 const catChoiceFilm = document.querySelector(".category-choice__two");
 const catChoiceScience = document.querySelector(".category-choice__three");
 const catChoiceJava = document.querySelector(".category-choice__four");
-const answerA = document.querySelector(".ButtonA");
-const answerB = document.querySelector(".ButtonB");
-const answerC = document.querySelector(".ButtonC");
 
 
 
@@ -93,7 +89,6 @@ const gameBegins = () => {
   <h3>Pick a category to start!</h3>
   `
   document.getElementById("startButton_show").className = "startButton_hide";
-  document.getElementById("catBoard").className = "category-choice";
   audioCrowdCheer.play();
 };
 
@@ -106,14 +101,13 @@ const catPlaySports =() => {
   document.getElementById("catBut1").className = "category-choice__one--unlit";
   document.getElementById("catBoard").className = "category-choice-hidden";
   loadQuestions(); //loadQuestions = this is sports q only, need to rename to cat.
-  audiodrumRoll.play();
-  setTimeout(playQuestionOne, 2500);
+  playQuestionOne();
 
 }
 
 const catPlayFilm =() => {
   questionCardDisplay.innerHTML = `
-  <h1>YOU'VE CHOOSEN TV & FILM</h1>
+  <h1>YOU'VE CHOOSEN TV & FIL<</h1>
   <h2>Here is your first question for 5pts</h2>
   `
   document.getElementById("catBut2").className = "category-choice__two--unlit";
@@ -170,14 +164,13 @@ const setDifficultQuestions = () => {
       questionHandler.hardQOption1 = questionHard.options[0];
       questionHandler.hardQOption2 = questionHard.options[1];
       questionHandler.hardQOption3 = questionHard.options[2];
-};
-
+      }
       //Master function for question load
 const loadQuestions = () => {
-  setEasyQuestions();
-  setMediumQuestions();
-  setDifficultQuestions();
-};
+        setEasyQuestions();
+        setMediumQuestions();
+        setDifficultQuestions();
+}
 
 // Gameplay
       // Display Question One
@@ -186,10 +179,6 @@ const playQuestionOne = () => {
   <h1>QUESTION 1</h1>
   <h2>${questionHandler.easyQuestion}</h2>
   `
-  document.getElementById("questions").className = "questionDisplay";
-  answerA.innerHTML = `A) ${questionHandler.easyQOption1}`;
-  answerB.innerHTML = `B) ${questionHandler.easyQOption2}`;
-  answerC.innerHTML = `C) ${questionHandler.easyQOption3}`;
 }
 
 // Event Listeners
