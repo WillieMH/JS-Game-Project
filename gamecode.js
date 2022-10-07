@@ -39,26 +39,31 @@ const sportsEasyArry = [
 // global variables
     // Object for handling questions
 const questionHandler = {
-  easyQuestion: null,
-  easyQAnswer: null,
-  easyQOption1: null,
-  easyQOption2: null,
-  easyQOption3: null,
-  medQuestion: null,
-  medQAnswer: null,
-  medQOption1: null,
-  medQOption2: null,
-  medQOption3: null,
-  hardQuestion: null,
-  hardQAnswer: null,
-  hardQOption1: null,
-  hardQOption2: null,
-  hardQOption3: null,
+  theQuestion: null,
+  theAnswer: null,
+  option1: null,
+  option2: null,
+  option3: null,
 };
 
+    // Object for handling scores
+    const quizGameScores = {
+      roundScore: 0,
+      overallGameScore: 0,
+      thisQuestionPoints: 5,
+    }
+
+    // Object for handling quiz information
+    const quizInfoHandler = {
+      currentQuestionNumber: 1,
+
+    }
+
+// Audio resources
 const audioCrowdCheer = new Audio("./resources/mixkit-cartoon-monkey-applause-103.wav");
 const audiodrumRoll = new Audio("./resources/drum-roll-105602.mp3");
-
+const crowdAww = new Audio("./resources/wrongAnswer.mp3");
+const crowdWhoop = new Audio("./resources/rightAnswer.mp3");
 
 //queries
 const questionCardDisplay = document.querySelector(".display");
@@ -70,6 +75,7 @@ const catChoiceJava = document.querySelector(".category-choice__four");
 const answerA = document.querySelector(".ButtonA");
 const answerB = document.querySelector(".ButtonB");
 const answerC = document.querySelector(".ButtonC");
+
 
 
 
@@ -98,14 +104,14 @@ const gameBegins = () => {
 };
 
     //Category Selected
-const catPlaySports =() => {
+const catPlaySportsQ1 =() => {
   questionCardDisplay.innerHTML = `
   <h1>YOU'VE CHOOSEN SPORTS</h1>
   <h2>Here is your first question for 5pts</h2>
   `
   document.getElementById("catBut1").className = "category-choice__one--unlit";
   document.getElementById("catBoard").className = "category-choice-hidden";
-  loadQuestions(); //loadQuestions = this is sports q only, need to rename to cat.
+  setEasyQuestions(); //loadQuestions = this is sports q only, need to rename to cat.
   audiodrumRoll.play();
   setTimeout(playQuestionOne, 2500);
 
@@ -118,7 +124,7 @@ const catPlayFilm =() => {
   `
   document.getElementById("catBut2").className = "category-choice__two--unlit";
   document.getElementById("catBoard").className = "category-choice-hidden";
-  loadQuestions();
+  setEasyQuestions();
 }
 
 const catPlayScience =() => {
@@ -145,60 +151,154 @@ const catPlayJava =() => {
 const setEasyQuestions = () => {
       const randomQuestionChooser = Math.floor(Math.random() *10);
       const questionEasy = (sportsEasyArry[randomQuestionChooser]);
-      questionHandler.easyQuestion = questionEasy.question;
-      questionHandler.easyQAnswer = questionEasy.answer;
-      questionHandler.easyQOption1 = questionEasy.options[0];
-      questionHandler.easyQOption2 = questionEasy.options[1];
-      questionHandler.easyQOption3 = questionEasy.options[2];
+      questionHandler.theQuestion = questionEasy.question;
+      questionHandler.theAnswer = questionEasy.answer;
+      questionHandler.option1 = questionEasy.options[0];
+      questionHandler.option2 = questionEasy.options[1];
+      questionHandler.option3 = questionEasy.options[2];
 };
       
 const setMediumQuestions = () => {
       const randomQuestionChooserMed = Math.floor(Math.random() *10);
       const questionMed = (sportsMediumArry[randomQuestionChooserMed]);
-      questionHandler.medQuestion = questionMed.question;
-      questionHandler.medQAnswer = questionMed.answer;
-      questionHandler.medQOption1 = questionMed.options[0];
-      questionHandler.medQOption2 = questionMed.options[1];
-      questionHandler.medQOption3 = questionMed.options[2];
+      questionHandler.theQuestion = questionMed.question;
+      questionHandler.theAnswer = questionMed.answer;
+      questionHandler.option1 = questionMed.options[0];
+      questionHandler.option2 = questionMed.options[1];
+      questionHandler.option3 = questionMed.options[2];
 };
       
 const setDifficultQuestions = () => {
       const randomQuestionChooserDif = Math.floor(Math.random() *10); //this bit works
       const questionHard = (sportsHardArry[randomQuestionChooserDif]); //this bit works
-      questionHandler.hardQuestion = questionHard.question; //this bit works
-      questionHandler.hardQAnswer = questionHard.answer;
-      questionHandler.hardQOption1 = questionHard.options[0];
-      questionHandler.hardQOption2 = questionHard.options[1];
-      questionHandler.hardQOption3 = questionHard.options[2];
+      questionHandler.theQuestion = questionHard.question; //this bit works
+      questionHandler.theAnswer = questionHard.answer;
+      questionHandler.option1 = questionHard.options[0];
+      questionHandler.option2 = questionHard.options[1];
+      questionHandler.option3 = questionHard.options[2];
 };
 
-      //Master function for question load
-const loadQuestions = () => {
-  setEasyQuestions();
-  setMediumQuestions();
-  setDifficultQuestions();
-};
+//Master function for question load - removed, need to load q round one by one
+
 
 // Gameplay
       // Display Question One
 const playQuestionOne = () => {
   questionCardDisplay.innerHTML = `
   <h1>QUESTION 1</h1>
-  <h2>${questionHandler.easyQuestion}</h2>
+  <h2>${questionHandler.theQuestion}</h2>
   `
   document.getElementById("questions").className = "questionDisplay";
-  answerA.innerHTML = `A) ${questionHandler.easyQOption1}`;
-  answerB.innerHTML = `B) ${questionHandler.easyQOption2}`;
-  answerC.innerHTML = `C) ${questionHandler.easyQOption3}`;
+  answerA.innerHTML = `A) ${questionHandler.option1}`;
+  answerB.innerHTML = `B) ${questionHandler.option2}`;
+  answerC.innerHTML = `C) ${questionHandler.option3}`;
+}
+
+const playQuestionTwo = () => {
+  resetQuestionHandler();
+  setMediumQuestions();
+  quizInfoHandler.currentQuestionNumber += 1;
+
+  questionCardDisplay.innerHTML = `
+  <h1>QUESTION 2</h1>
+  <h2>for 10pts</h2>
+  <h2>${questionHandler.theQuestion}</h2>
+  `
+  document.getElementById("questions").className = "questionDisplay";
+  answerA.innerHTML = `A) ${questionHandler.option1}`;
+  answerB.innerHTML = `B) ${questionHandler.option2}`;
+  answerC.innerHTML = `C) ${questionHandler.option3}`;
+}
+
+const playQuestionThree = () => {
+  resetQuestionHandler();
+  setDifficultQuestions();
+  quizInfoHandler.currentQuestionNumber += 1;
+  questionCardDisplay.innerHTML = `
+  <h1>FINAL QUESTION OF THE ROUND</h1>
+  <h2>for 15pts</h2>
+  <h2>${questionHandler.theQuestion}</h2>
+  `
+  document.getElementById("questions").className = "questionDisplay";
+  answerA.innerHTML = `A) ${questionHandler.option1}`;
+  answerB.innerHTML = `B) ${questionHandler.option2}`;
+  answerC.innerHTML = `C) ${questionHandler.option3}`;
+  console.log(questionHandler);
+  console.log(quizGameScores);
+  console.log(quizInfoHandler);
+}
+
+      // Answer Checker Function
+const answerChecking = (event) => {
+  yourAnswer = event.target.value;
+  console.log(yourAnswer);
+  if (yourAnswer == questionHandler.theAnswer) {
+    answerCorrect();
+  } else {
+    answerWrong();
+  }
+}
+
+const answerWrong = () => {
+  quizGameScores.thisQuestionPoints += 5;
+  questionCardDisplay.innerHTML = `
+  <h1>I'm sorry that was wrong!</h1>
+  `
+  if (quizInfoHandler.currentQuestionNumber == 1){
+    setTimeout(playQuestionTwo, 2500);
+  } else if (quizInfoHandler.currentQuestionNumber == 2) {
+    setTimeout(playQuestionThree, 2500);
+  } else if (quizInfoHandler.currentQuestionNumber == 3) {
+    setTimeout(endOfTheRound, 2500);
+  };
+  crowdAww.play();
+}
+
+const answerCorrect = () => {
+  questionCardDisplay.innerHTML = `
+  <h1>Thats right, well done</h1>
+  <h2>Have ${quizGameScores.thisQuestionPoints} pts</h2>
+  `
+  quizGameScores.roundScore += quizGameScores.thisQuestionPoints;
+  quizGameScores.thisQuestionPoints += 5;
+  crowdWhoop.play();
+  if (quizInfoHandler.currentQuestionNumber == 1){
+    setTimeout(playQuestionTwo, 2500);
+  } else if (quizInfoHandler.currentQuestionNumber == 2) {
+    setTimeout(playQuestionThree, 2500);
+  } else if (quizInfoHandler.currentQuestionNumber == 3) {
+    setTimeout(endOfTheRound, 2500);
+  }
+}
+// Empty questionHandler
+const resetQuestionHandler = () => {
+  questionHandler.theQuestion = null;
+  questionHandler.theAnswer = null;
+  questionHandler.option1 = null;
+  questionHandler.option2 = null;
+  questionHandler.option3 = null;
+}
+
+// End of a round
+const endOfTheRound = () => {
+  questionCardDisplay.innerHTML = `
+  <h1>Thats the end of the round!</h1>
+  `
+  document.getElementById("questions").className = "questionDisplay-hidden";
+
+  // reset questions, scoring, update overall score, need rounds played indicator
 }
 
 // Event Listeners
 window.onload = welcomeMessage;
 startTheGame.addEventListener("click", gameBegins);
-catChoiceSports.addEventListener("click", catPlaySports);
+catChoiceSports.addEventListener("click", catPlaySportsQ1);
 catChoiceFilm.addEventListener("click", catPlayFilm);
 catChoiceScience.addEventListener("click", catPlayScience);
 catChoiceJava.addEventListener("click", catPlayJava);
+answerA.addEventListener("click", answerChecking);
+answerB.addEventListener("click", answerChecking);
+answerC.addEventListener("click", answerChecking);
 
 
 
