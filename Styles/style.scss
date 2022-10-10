@@ -54,54 +54,44 @@ body {
 }
 
 .category-choice {
-  border: 2px solid green;
-  height: 175px;
+  height: auto;
   width: 345px;
   text-align: center;
-  background-color: aliceblue;
 
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
 
-  .category-choice__one{
+
+  .category-choice__one, .category-choice__two, .category-choice__three, .category-choice__four{
     border: 1px solid black;
     background-color: yellow;
+    margin: 10px;
+    border-radius: 5px;
   }
 
   .category-choice__one--unlit{
     border: 1px solid red;
     background-color: grey;
-  }
-
-  .category-choice__two{
-    border: 1px solid black;
-    background-color: yellow;
+    margin: 5px;
   }
 
   .category-choice__two--unlit{
     border: 1px solid red;
     background-color: grey;
-  }
-
-  .category-choice__three{
-    border: 1px solid black;
-    background-color: yellow;
+    margin: 5px;
   }
 
   .category-choice__three--unlit{
     border: 1px solid red;
     background-color: grey;
-  }
-
-  .category-choice__four{
-    border: 1px solid black;
-    background-color: yellow;
+    margin: 5px;
   }
 
   .category-choice__four--unlit{
     border: 1px solid red;
     background-color: grey;
+    margin: 5px;
   }
 }
 

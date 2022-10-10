@@ -22,67 +22,67 @@ const sportsEasyArry = [
   ];
 const TVAndFilmEasyArry = [
   {question: "In which English seaside town was 'Fawlty Towers' set?", answer: "A", options: ["Torquay", "Newquay", "Torbay"]},
-  {question: "How many contestants are on each team in 'University Challenge'?", answer: "A", options: ["Four", "wrong answer1", "wrong answer2"]},
-  {question: "Who played Leonard Hofstadter in 'The Big Bang Theory'?", answer: "B", options: ["wrong answer1", "Johnny Galecki", "wrong answer2"]},
-  {question: "Who is the alter ego of Scott Lang, as featured in the 2015 and 2018 Marvel films?", answer: "B", options: ["Spider Man", "Ant-Man", "wrong answer2"]},
-  {question: "Who played Phoebe Buffay in 'Friends'?", answer: "B", options: ["wrong answer1", "Lisa Kudrow", "wrong answer2"]},
+  {question: "How many contestants are on each team in 'University Challenge'?", answer: "A", options: ["Four", "Three", "Five"]},
+  {question: "Who played Leonard Hofstadter in 'The Big Bang Theory'?", answer: "B", options: ["Jim Parsons", "Johnny Galecki", "Simon Helberg"]},
+  {question: "Who is the alter ego of Scott Lang, as featured in the 2015 and 2018 Marvel films?", answer: "B", options: ["Spider Man", "Ant-Man", "Green Lantern"]},
+  {question: "Who played Phoebe Buffay in 'Friends'?", answer: "B", options: ["Jennifer Aniston ", "Lisa Kudrow", "Courteney Cox"]},
 ]
 const TVAndFilmMediumArry = [
-  {question: "The 1986 novel 'It' by Stephen King was turned into a film in 2017. What is the name of the clown?", answer: "C", options: ["wrong answer1", "wrong answer2", "Pennywise"]},
-  {question: "Who directed the film Jaws (1975)?", answer: "B", options: ["wrong answer1", "Steven Spielberg", "wrong answer2"]},
-  {question: "Who played Katniss Everdeen in 'The Hunger Games' series?", answer: "A", options: ["Jennifer Lawrence", "wrong answer1", "wrong answer2"]},
-  {question: "Who played  Rick Blaine in 'Casablanca' (1942)?", answer: "A", options: ["Humphrey Bogart", "wrong answer1", "wrong answer2"]},
-  {question: "Who won 'Britain's Got Talent in June 2018?", answer: "C", options: ["wrong answer1", "wrong answer2", "Lost Voice Guy"]},
+  {question: "The 1986 novel 'It' by Stephen King was turned into a film in 2017. What is the name of the clown?", answer: "C", options: ["Buttons", "Calamity", "Pennywise"]},
+  {question: "Who directed the film Jaws (1975)?", answer: "B", options: ["Ridley Scott", "Steven Spielberg", "James Cameron"]},
+  {question: "Who played Katniss Everdeen in 'The Hunger Games' series?", answer: "A", options: ["Jennifer Lawrence", "Jennifer Aniston", "Jennifer Lopez"]},
+  {question: "Who played  Rick Blaine in 'Casablanca' (1942)?", answer: "A", options: ["Humphrey Bogart", "Frank Sinatra", "Fred Astaire"]},
+  {question: "Who won 'Britain's Got Talent in June 2018?", answer: "C", options: ["B Positive Choir", "Jack & Tim", "Lost Voice Guy"]},
 ];
 const TVAndFilmHardArry = [
-  {question: "Who were the four main characters in The Young Ones?", answer: "C", options: ["wrong answer1", "wrong answer2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "From which show does the theme song start “Now this is a story all about how my life got flipped, turned upside down.”?", answer: "C", options: ["wrong answer1", "wrong answer2", "The Fresh Prince of Bel Air"]},
-  {question: "Who got pushed into the Thames and disappeared, presumed dead, in 'Absolutely Fabulous: The Movie' (2014)?", answer: "C", options: ["wrong answer1", "wrong answer2", "Kate Moss"]},
-  {question: "Who directed the film A Clockwork Orange (1971)?", answer: "A", options: ["Stanley Kubrick", "wrong answer1", "wrong answer2"]},
-  {question: "Which film won the 'Best Picture' Oscar in the 90th Academy Awards in 2018?", answer: "A", options: ["The Shape of Water", "wrong answer1", "wrong answer2"]},
+  {question: "Who were the four main characters in The Young Ones?", answer: "C", options: ["Alexi, Ade, Peter and Mark", "John, Ringo, Peter and Paul", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "From which show does the theme song start “Now this is a story all about how my life got flipped, turned upside down.”?", answer: "C", options: ["Cheers", "Beverley Hills 90210", "The Fresh Prince of Bel Air"]},
+  {question: "Who got pushed into the Thames and disappeared, presumed dead, in 'Absolutely Fabulous: The Movie' (2014)?", answer: "C", options: ["Linda Evangelista", "Naomi Campbell", "Kate Moss"]},
+  {question: "Who directed the film A Clockwork Orange (1971)?", answer: "A", options: ["Stanley Kubrick", "Alfred Hitchcock", "Martin Scorcese"]},
+  {question: "Which film won the 'Best Picture' Oscar in the 90th Academy Awards in 2018?", answer: "A", options: ["The Shape of Water", "Darkest Hour", "Dunkirk"]},
 ];
 const musicEasyArry = [
-  {question: "Music Easy Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Easy Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Easy Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Easy Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Easy Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Name all five members of One Direction?", answer: "B", options: ["Eric, Stan, Kyle, Cartman and Timmy", "Harry, Niall, Liam, Louis and Zayn ", "Peter, Ray, David, Henry and Mike"]},
+  {question: "How many members are there in Korean boy band - BTS?", answer: "B", options: ["3", "7", "5"]},
+  {question: "In which year did the Spice Girls release Wannabe?", answer: "A", options: ["1996", "1997", "1998"]},
+  {question: "Will.i.am is best known for being part of which hip hop group?", answer: "A", options: ["Black Eyed Peas", "Run DMC", "Outkast"]},
+  {question: "Who had a No.1 hit with “Ice Ice Baby”?", answer: "C", options: ["Kriss Kross", "Marky Mark", "Vanilla Ice"]},
 ];
 const musicMediumArry = [
-  {question: "Music Med Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Med Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Med Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Med Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Med Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Which singer can't stop staring at those ocean eyes?", answer: "C", options: ["Billy Ocean", "Barbara Streisand", "Billie Eilish"]},
+  {question: "Who is the best-selling female artist of all time?", answer: "B", options: ["Mariah Carey", "Madonna", "Adele"]},
+  {question: "Which musical is based on the 1992 film of the same name which starred and featured songs by Whitney Houston?", answer: "B", options: ["Prince of Thieves", "The Bodyguard", "Wicked"]},
+  {question: "Which American hip hop duo had a 1986 hit with 'Push It'?", answer: "B", options: ["Run DMC", "Salt-N-Pepa", "Kriss Kross"]},
+  {question: "The Barbadian singer Robyn Fenty is better known by her middle name of what?", answer: "C", options: ["Adele", "Beyonce", "Rihanna"]},
 ];
 const musicHardArry = [
-  {question: "Music Hard Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Hard Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Hard Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Hard Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Music Hard Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "Who was the original drummer for The Beatles?", answer: "A", options: ["Pete Best", "Mick Rodgers", "Peter Stone"]},
+  {question: "What is the best-selling single of all-time worldwide?", answer: "B", options: ["Thriller by Michael Jackson", "White Christmas by Bing Crosby", "All I Want for Christmas by Mariah Carey"]},
+  {question: "In which video did Michael Jackson first perform his famous moonwalk in 1983?", answer: "A", options: ["Billie Jean", "Thriller", "Beat It"]},
+  {question: "'Children' was a 1996 instrumental hit for which DJ", answer: "A", options: ["Robert Miles", "Heidi Lawden", "Carl Craig"]},
+  {question: "Which female artist had her first hit in 1957 with 'Walkin after Midnight'?", answer: "A", options: ["Patsy Cline", "Diana Ross", "Petula Clark"]},
 ];
 const javaEasyArry = [
-  {question: "Java Easy Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Easy Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Easy Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Easy Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Easy Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "What is the highest mountain in Java?", answer: "A", options: ["Semeru", "Slamet", "Sumbing"]},
+  {question: "What is the capital city of Java?", answer: "B", options: ["Bandung", "Jakarta", "Semarang"]},
+  {question: "What is the highest mountain in Java?", answer: "A", options: ["Semeru", "Slamet", "Sumbing"]},
+  {question: "What is the capital city of Java?", answer: "B", options: ["Bandung", "Jakarta", "Semarang"]},
+  {question: "What is the capital city of Java?", answer: "B", options: ["Bandung", "Jakarta", "Semarang"]},
 ];
 const javaMediumArry = [
-  {question: "Java Med Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Med Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Med Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Med Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Med Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "How many volcanos are there on Java?", answer: "B", options: ["110", "112", "114"]},
+  {question: "How many volcanos are there on Java?", answer: "B", options: ["110", "112", "114"]},
+  {question: "How many volcanos are there on Java?", answer: "B", options: ["110", "112", "114"]},
+  {question: "How many volcanos are there on Java?", answer: "B", options: ["110", "112", "114"]},
+  {question: "How many volcanos are there on Java?", answer: "B", options: ["110", "112", "114"]},
 ];
 
 const javaHardArry = [
-  {question: "Java Hard Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Hard Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Hard Question3?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Hard Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
-  {question: "Java Hard Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
+  {question: "How many island in the world are larger than Java?", answer: "A", options: ["12", "24", "36"]},
+  {question: "How many island in the world are larger than Java?", answer: "B", options: ["24", "12", "36"]},
+  {question: "How many island in the world are larger than Java?", answer: "A", options: ["12", "24", "36"]},
+  {question: "How many island in the world are larger than Java?", answer: "A", options: ["12", "24", "36"]},
+  {question: "How many island in the world are larger than Java?", answer: "A", options: ["12", "24", "36"]},
 ];
 
 // global variables
@@ -188,7 +188,7 @@ const catPlayFilm =() => {
   currentHardQuestionPack = TVAndFilmHardArry;
   setEasyQuestions();
   quizInfoHandler.roundName = "TV & Film"
-  scoreboardDisplay.innerHTML = quizInfoHandler.roundName
+  scoreboardDisplay.innerHTML = `This is the ${quizInfoHandler.roundName} round`
   questionCardDisplay.innerHTML = `
   <h1>YOU'VE CHOOSEN TV & FILM</h1>
   <h2>Here is your first question for 5pts</h2>
@@ -207,7 +207,7 @@ const catPlayScience =() => {
   currentHardQuestionPack = musicHardArry;
   setEasyQuestions();
   quizInfoHandler.roundName = "Music"
-  scoreboardDisplay.innerHTML = quizInfoHandler.roundName
+  scoreboardDisplay.innerHTML = `This is the ${quizInfoHandler.roundName} round`
 
   questionCardDisplay.innerHTML = `
   <h1>YOU'VE CHOOSEN MUSIC</h1>
@@ -227,9 +227,10 @@ const catPlayJava =() => {
   currentHardQuestionPack = javaHardArry;
   setEasyQuestions();
   quizInfoHandler.roundName = "Java"
+  scoreboardDisplay.innerHTML = `This is the ${quizInfoHandler.roundName} round`
   
   questionCardDisplay.innerHTML = `
-  <h1>YOU'VE CHOOSEN JAVASCRIPT</h1>
+  <h1>YOU'VE CHOOSEN JAVA</h1>
   <h2>Here is your first question for 5pts</h2>
   `
   document.getElementById("catBut4").className = "category-choice__four--unlit";
