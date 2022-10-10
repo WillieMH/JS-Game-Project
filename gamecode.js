@@ -27,7 +27,6 @@ const TVAndFilmEasyArry = [
   {question: "Who is the alter ego of Scott Lang, as featured in the 2015 and 2018 Marvel films?", answer: "B", options: ["Spider Man", "Ant-Man", "wrong answer2"]},
   {question: "Who played Phoebe Buffay in 'Friends'?", answer: "B", options: ["wrong answer1", "Lisa Kudrow", "wrong answer2"]},
 ]
-
 const TVAndFilmMediumArry = [
   {question: "The 1986 novel 'It' by Stephen King was turned into a film in 2017. What is the name of the clown?", answer: "C", options: ["wrong answer1", "wrong answer2", "Pennywise"]},
   {question: "Who directed the film Jaws (1975)?", answer: "B", options: ["wrong answer1", "Steven Spielberg", "wrong answer2"]},
@@ -35,7 +34,6 @@ const TVAndFilmMediumArry = [
   {question: "Who played  Rick Blaine in 'Casablanca' (1942)?", answer: "A", options: ["Humphrey Bogart", "wrong answer1", "wrong answer2"]},
   {question: "Who won 'Britain's Got Talent in June 2018?", answer: "C", options: ["wrong answer1", "wrong answer2", "Lost Voice Guy"]},
 ];
-
 const TVAndFilmHardArry = [
   {question: "Who were the four main characters in The Young Ones?", answer: "C", options: ["wrong answer1", "wrong answer2", "Vyvyan, Rick, Neil and Mike"]},
   {question: "From which show does the theme song start “Now this is a story all about how my life got flipped, turned upside down.”?", answer: "C", options: ["wrong answer1", "wrong answer2", "The Fresh Prince of Bel Air"]},
@@ -43,7 +41,6 @@ const TVAndFilmHardArry = [
   {question: "Who directed the film A Clockwork Orange (1971)?", answer: "A", options: ["Stanley Kubrick", "wrong answer1", "wrong answer2"]},
   {question: "Which film won the 'Best Picture' Oscar in the 90th Academy Awards in 2018?", answer: "A", options: ["The Shape of Water", "wrong answer1", "wrong answer2"]},
 ];
-
 const musicEasyArry = [
   {question: "Music Easy Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
   {question: "Music Easy Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
@@ -51,7 +48,6 @@ const musicEasyArry = [
   {question: "Music Easy Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
   {question: "Music Easy Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
 ];
-
 const musicMediumArry = [
   {question: "Music Med Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
   {question: "Music Med Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
@@ -59,7 +55,6 @@ const musicMediumArry = [
   {question: "Music Med Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
   {question: "Music Med Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
 ];
-
 const musicHardArry = [
   {question: "Music Hard Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
   {question: "Music Hard Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
@@ -67,7 +62,6 @@ const musicHardArry = [
   {question: "Music Hard Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
   {question: "Music Hard Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
 ];
-
 const javaEasyArry = [
   {question: "Java Easy Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
   {question: "Java Easy Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
@@ -75,7 +69,6 @@ const javaEasyArry = [
   {question: "Java Easy Question4?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
   {question: "Java Easy Question5?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
 ];
-
 const javaMediumArry = [
   {question: "Java Med Question1?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
   {question: "Java Med Question2?", answer: "C", options: ["wrong music1", "wrong music2", "Vyvyan, Rick, Neil and Mike"]},
@@ -113,8 +106,10 @@ const quizGameScores = {
 const quizInfoHandler = {
       currentQuestionNumber: 1,
       currentRound: 0,
-
+      roundName: "",
 };
+
+waitTime = 2800;
 
 let currentEasyQuestionPack = null;
 let currentMedQuestionPack = null;
@@ -128,6 +123,7 @@ const crowdWhoop = new Audio("./resources/rightAnswer.mp3");
 
 //queries
 const questionCardDisplay = document.querySelector(".display");
+const scoreboardDisplay = document.querySelector("#sbdisp");
 const startTheGame = document.querySelector(".startHere");
 const catChoiceSports = document.querySelector(".category-choice__one");
 const catChoiceFilm = document.querySelector(".category-choice__two");
@@ -171,6 +167,8 @@ const catPlaySportsQ1 =() => {
   currentMedQuestionPack = sportsMediumArry;
   currentHardQuestionPack = sportsHardArry;
   setEasyQuestions();
+  quizInfoHandler.roundName = "Sports"
+  scoreboardDisplay.innerHTML = `This is the ${quizInfoHandler.roundName} round`
 
   questionCardDisplay.innerHTML = `
   <h1>YOU'VE CHOOSEN SPORTS</h1>
@@ -180,7 +178,7 @@ const catPlaySportsQ1 =() => {
   document.getElementById("catBoard").className = "category-choice-hidden";
   catChoiceSports.removeEventListener("click", catPlaySportsQ1);
   audiodrumRoll.play();
-  setTimeout(playQuestionOne, 2500);
+  setTimeout(playQuestionOne, waitTime);
 }
 
 const catPlayFilm =() => {
@@ -189,6 +187,8 @@ const catPlayFilm =() => {
   currentMedQuestionPack = TVAndFilmMediumArry;
   currentHardQuestionPack = TVAndFilmHardArry;
   setEasyQuestions();
+  quizInfoHandler.roundName = "TV & Film"
+  scoreboardDisplay.innerHTML = quizInfoHandler.roundName
   questionCardDisplay.innerHTML = `
   <h1>YOU'VE CHOOSEN TV & FILM</h1>
   <h2>Here is your first question for 5pts</h2>
@@ -197,7 +197,7 @@ const catPlayFilm =() => {
   document.getElementById("catBoard").className = "category-choice-hidden";
   catChoiceFilm.removeEventListener("click", catPlayFilm);
   audiodrumRoll.play();
-  setTimeout(playQuestionOne, 2500);
+  setTimeout(playQuestionOne, waitTime);
 }
 
 const catPlayScience =() => {
@@ -206,15 +206,18 @@ const catPlayScience =() => {
   currentMedQuestionPack = musicMediumArry;
   currentHardQuestionPack = musicHardArry;
   setEasyQuestions();
+  quizInfoHandler.roundName = "Music"
+  scoreboardDisplay.innerHTML = quizInfoHandler.roundName
+
   questionCardDisplay.innerHTML = `
-  <h1>YOU'VE CHOOSEN SCIENCE & NATURE</h1>
+  <h1>YOU'VE CHOOSEN MUSIC</h1>
   <h2>Here is your first question for 5pts</h2>
   `
   document.getElementById("catBut3").className = "category-choice__three--unlit";
   document.getElementById("catBoard").className = "category-choice-hidden";
   catChoiceScience.removeEventListener("click", catPlayScience);
   audiodrumRoll.play();
-  setTimeout(playQuestionOne, 2500);
+  setTimeout(playQuestionOne, waitTime);
 }
 
 const catPlayJava =() => {
@@ -223,6 +226,8 @@ const catPlayJava =() => {
   currentMedQuestionPack = javaMediumArry;
   currentHardQuestionPack = javaHardArry;
   setEasyQuestions();
+  quizInfoHandler.roundName = "Java"
+  
   questionCardDisplay.innerHTML = `
   <h1>YOU'VE CHOOSEN JAVASCRIPT</h1>
   <h2>Here is your first question for 5pts</h2>
@@ -231,7 +236,7 @@ const catPlayJava =() => {
   document.getElementById("catBoard").className = "category-choice-hidden";
   catChoiceJava.removeEventListener("click", catPlayJava);
   audiodrumRoll.play();
-  setTimeout(playQuestionOne, 2500);
+  setTimeout(playQuestionOne, waitTime);
 }
 
     //Load questions
@@ -270,10 +275,11 @@ const setDifficultQuestions = () => {
 
 // Gameplay
       // Display Question One
+
 const playQuestionOne = () => {
   questionCardDisplay.innerHTML = `
   <h1>QUESTION 1</h1>
-  <h2>${questionHandler.theQuestion}</h2>
+  <h3>${questionHandler.theQuestion}</h3>
   `
   document.getElementById("questions").className = "questionDisplay";
   answerA.innerHTML = `A) ${questionHandler.option1}`;
@@ -289,7 +295,7 @@ const playQuestionTwo = () => {
   questionCardDisplay.innerHTML = `
   <h1>QUESTION 2</h1>
   <h2>for 10pts</h2>
-  <h2>${questionHandler.theQuestion}</h2>
+  <h3>${questionHandler.theQuestion}</h3>
   `
   document.getElementById("questions").className = "questionDisplay";
   answerA.innerHTML = `A) ${questionHandler.option1}`;
@@ -304,7 +310,7 @@ const playQuestionThree = () => {
   questionCardDisplay.innerHTML = `
   <h1>FINAL QUESTION OF THE ROUND</h1>
   <h2>for 15pts</h2>
-  <h2>${questionHandler.theQuestion}</h2>
+  <h3>${questionHandler.theQuestion}</h3>
   `
   document.getElementById("questions").className = "questionDisplay";
   answerA.innerHTML = `A) ${questionHandler.option1}`;
@@ -332,11 +338,11 @@ const answerWrong = () => {
   <h1>I'm sorry that was wrong!</h1>
   `
   if (quizInfoHandler.currentQuestionNumber == 1){
-    setTimeout(playQuestionTwo, 2500);
+    setTimeout(playQuestionTwo, waitTime);
   } else if (quizInfoHandler.currentQuestionNumber == 2) {
-    setTimeout(playQuestionThree, 2500);
+    setTimeout(playQuestionThree, waitTime);
   } else if (quizInfoHandler.currentQuestionNumber == 3) {
-    setTimeout(endOfTheRound, 2500);
+    setTimeout(endOfTheRound, waitTime);
   };
   crowdAww.play();
 }
@@ -350,11 +356,11 @@ const answerCorrect = () => {
   quizGameScores.thisQuestionPoints += 5;
   crowdWhoop.play();
   if (quizInfoHandler.currentQuestionNumber == 1){
-    setTimeout(playQuestionTwo, 2500);
+    setTimeout(playQuestionTwo, waitTime);
   } else if (quizInfoHandler.currentQuestionNumber == 2) {
-    setTimeout(playQuestionThree, 2500);
+    setTimeout(playQuestionThree, waitTime);
   } else if (quizInfoHandler.currentQuestionNumber == 3) {
-    setTimeout(endOfTheRound, 2500);
+    setTimeout(endOfTheRound, waitTime);
   }
 }
 // Empty questionHandler
@@ -377,14 +383,17 @@ const endOfTheRound = () => {
   document.getElementById("questions").className = "questionDisplay-hidden";
   
   quizInfoHandler.currentQuestionNumber = 1;
-  quizGameScores.roundScore = 0;
+  
   quizGameScores.thisQuestionPoints = 5;
   quizInfoHandler.currentRound += 1;
+
+  scoreboardDisplay.innerHTML = `Score this round:${quizGameScores.roundScore} Total score:${quizGameScores.overallGameScore}`
+  quizGameScores.roundScore = 0;
   
   if (quizInfoHandler.currentRound === 4) {
-    setTimeout(endGameProcess, 2500);
+    setTimeout(endGameProcess, waitTime);
   } else {
-    setTimeout(gameBegins, 2500);
+    setTimeout(gameBegins, waitTime);
   }
 }
 
@@ -393,6 +402,7 @@ const endGameProcess = () => {
   <h1>AND THATS THE END OF THE GAME!</h1>
 `
 }
+
 
 // Event Listeners
 window.onload = welcomeMessage;

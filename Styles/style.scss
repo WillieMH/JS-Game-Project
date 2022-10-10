@@ -21,16 +21,26 @@ body {
   margin-bottom: 20px;
 }
 
-.display {
+.question-card-layout {
   border: 2px solid black;
-  height: 300px;
+  border-radius: 10px;
+  height: auto;
   width: 345px;
   text-align: center;
-  background-color: aliceblue;
-
+  background-image: url("../Resources/25235.jpg");
+  background-size: 550px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2px;
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .display {
+    color: red;
+    font-size: 1.2rem;
+  }
 }
 
 .questionDisplay{
