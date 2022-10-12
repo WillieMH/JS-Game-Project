@@ -13,6 +13,9 @@ The items I ran out of time to work on;
   - A restart/start new quiz button
   - Iron out the creases in the code
   - Utilise the "scoreboard" more
+  - Add sound on/off button
+  - Add credits
+  - Refactor code to be more compact
   ...
 
 ## ISSUES

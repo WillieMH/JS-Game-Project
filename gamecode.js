@@ -76,7 +76,6 @@ const javaMediumArry = [
   {question: "How many volcanos are there on Java?", answer: "B", options: ["110", "112", "114"]},
   {question: "How many volcanos are there on Java?", answer: "B", options: ["110", "112", "114"]},
 ];
-
 const javaHardArry = [
   {question: "How many island in the world are larger than Java?", answer: "A", options: ["12", "24", "36"]},
   {question: "How many island in the world are larger than Java?", answer: "B", options: ["24", "12", "36"]},
