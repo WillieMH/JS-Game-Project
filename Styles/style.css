@@ -1,18 +1,24 @@
+@font-face {
+  font-family: "Chalkboard";
+  src: url("../media/Chalktastic-r78L.ttf") format("truetype");
+}
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-image: url("../Resources/phonebox-mobilesize.png");
+  background-image: url("../media/phonebox-mobilesize.png");
   background-repeat: no-repeat;
 }
 
 .scoreboard {
-  border: 2px solid purple;
-  height: 50px;
+  border: 5px solid #966F33;
+  height: 100px;
   width: 345px;
   text-align: center;
-  background-color: aliceblue;
+  background-color: #31343a;
+  color: aliceblue;
+  font-family: "Chalkboard", sans-serif;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -21,14 +27,14 @@ body {
 .question-card-layout {
   border: 2px solid black;
   border-radius: 10px;
-  height: auto;
+  height: 375px;
   width: 345px;
   text-align: center;
-  background-image: url("../Resources/25235.jpg");
+  background-image: url("../media/25235.jpg");
   background-size: 550px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2px;
+  margin-bottom: 15px;
 }
 .question-card-layout .card-title {
   font-size: 1.3rem;

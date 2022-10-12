@@ -140,8 +140,9 @@ const answerC = document.querySelector(".ButtonC");
     //Initial Screen
 const welcomeMessage = () => {
   questionCardDisplay.innerHTML = `
-  <h1>WELCOME TO</h1>
-  <h2>The Quiz in a Phone Box!</h2>
+  <h1>WELCOME</h1>
+  <h1>TO</h1>
+  <h2>The Pub Quiz at The Winchester!</h2>
   <h3>CLICK START TO PLAY</h3>
   `
 };
@@ -271,7 +272,7 @@ const setDifficultQuestions = () => {
       questionHandler.option3 = questionHard.options[2];
 };
 
-//Master function for question load - removed, need to load q round one by one
+// Master function for question load - removed, need to load q round one by one
 
 
 // Gameplay
@@ -388,7 +389,9 @@ const endOfTheRound = () => {
   quizGameScores.thisQuestionPoints = 5;
   quizInfoHandler.currentRound += 1;
 
-  scoreboardDisplay.innerHTML = `Score this round:${quizGameScores.roundScore} Total score:${quizGameScores.overallGameScore}`
+  scoreboardDisplay.innerHTML = `Score this round:${quizGameScores.roundScore}`
+  scoreboardDisplay.innerHTML = `Total score:${quizGameScores.overallGameScore}`
+
   quizGameScores.roundScore = 0;
   
   if (quizInfoHandler.currentRound === 4) {
