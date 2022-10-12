@@ -140,8 +140,7 @@ const answerC = document.querySelector(".ButtonC");
     //Initial Screen
 const welcomeMessage = () => {
   questionCardDisplay.innerHTML = `
-  <h1>WELCOME</h1>
-  <h1>TO</h1>
+  <h1>WELCOME TO</h1>
   <h2>The Pub Quiz at The Winchester!</h2>
   <h3>CLICK START TO PLAY</h3>
   `
@@ -402,11 +401,28 @@ const endOfTheRound = () => {
 }
 
 const endGameProcess = () => {
+  if (quizGameScores.overallGameScore < 40) {
+    questionCardDisplay.innerHTML = `
+    <h2>AND THATS THE END OF THE GAME!</h2>
+    <h3>You're final score is ${quizGameScores.overallGameScore}</h3>
+    <h2>You've won a used bar ashtray!</h2>
+  `
+  } else if (quizGameScores.overallGameScore >= 40 && quizGameScores.overallGameScore < 80) {
+    questionCardDisplay.innerHTML = `
+    <h2>AND THATS THE END OF THE GAME!</h2>
+    <h3>You're final score is ${quizGameScores.overallGameScore}</h3>
+    <h2>A £5 bar voucher!</h2>
+    <h4>(Not to be used during happy hour)</h4>
+  `
+  } else if (quizGameScores.overallGameScore >= 80) { 
   questionCardDisplay.innerHTML = `
-  <h1>AND THATS THE END OF THE GAME!</h1>
+  <h2>AND THATS THE END OF THE GAME!</h2>
+  <h3>You're final score is ${quizGameScores.overallGameScore}</h3>
+  <h2>You've won the jackpot!!</h2>
+  <h2>A bottle of asti spumante!</h2> 
 `
 }
-
+}
 
 // Event Listeners
 window.onload = welcomeMessage;

@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url("../media/phonebox-mobilesize.png");
+  background-image: url("../media/beer-g4f9fea7f3_1920.jpg");
 
   background-repeat: no-repeat;
 }
@@ -52,6 +52,15 @@ body {
 .questionDisplay{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  
+  .ButtonA, .ButtonB, .ButtonC {
+    width: 300px;
+    margin: 10px;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 6px;
+  }
   
 }
 
@@ -70,34 +79,41 @@ body {
 
 
   .category-choice__one, .category-choice__two, .category-choice__three, .category-choice__four{
-    border: 1px solid black;
+    border: 2px solid goldenrod;
     background-color: yellow;
-    margin: 10px;
+    margin: 20px;
     border-radius: 5px;
+    padding: 10px;
+    
+
   }
 
   .category-choice__one--unlit{
-    border: 1px solid red;
+    border: 2px solid red;
     background-color: grey;
-    margin: 5px;
+    margin: 20px;
+    border-radius: 5px;
   }
 
   .category-choice__two--unlit{
     border: 1px solid red;
     background-color: grey;
-    margin: 5px;
+    margin: 20px;
+    border-radius: 5px;
   }
 
   .category-choice__three--unlit{
     border: 1px solid red;
     background-color: grey;
-    margin: 5px;
+    margin: 20px;
+    border-radius: 5px;
   }
 
   .category-choice__four--unlit{
     border: 1px solid red;
     background-color: grey;
-    margin: 5px;
+    margin: 20px;
+    border-radius: 5px;
   }
 }
 
@@ -112,4 +128,5 @@ body {
 .startButton_hide {
   display: none;
 }
+
 
